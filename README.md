@@ -7,7 +7,26 @@
 `DICTATION.md` is an optional, repository-level prompt file that corrects transcription text to match repository-specific jargon.
 
 - A speech-enabled editor **SHOULD** automatically detect `DICTATION.md` and use it as a post-processing step after STT.
+- A speech-enabled editor **MUST** ask the user for permission before using `DICTATION.md` for the first time.
 - Users should be able to choose the LLM model used for correction. `DICTATION.md` should be tuned for small/local models.
+
+## 📋 Frontmatter
+
+`DICTATION.md` supports optional YAML frontmatter fields:
+
+| Field | Type | Description |
+|-------|------|-------------|
+| `description` | string | A short description of the dictation prompt, shown to the user when asking for permission. |
+| `model` | string | The preferred LLM model identifier to use for correction (e.g. `gpt-4o-mini`, `phi3`). The editor **MAY** use this as a default, but users **SHOULD** be able to override it. |
+
+Example:
+
+```markdown
+---
+description: Corrects speech-to-text for the dictationmd project vocabulary.
+model: gpt-4o-mini
+---
+```
 
 ## 🤔 Why
 
