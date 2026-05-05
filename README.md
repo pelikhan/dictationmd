@@ -1,23 +1,24 @@
-# dictationmd
-A standard to define a speech to text correcting prompt.
+# 🎙️ dictationmd
 
-## The spec
+> A standard for defining a speech-to-text correction prompt — so your repo's jargon survives the mic.
 
-DICTATION.md is an optional repository level prompt file that corrects transcriltion text to repository jargon.
+## 📄 The Spec
 
-- An editor speech enabled SHOULD automatically detect DICTATIOM.md and use it as a post processing step of STT.
-- The user should be able to choose the LLM model to apply corrextion. DICTATION.md should be tuned for small/local models.
+`DICTATION.md` is an optional, repository-level prompt file that corrects transcription text to match repository-specific jargon.
 
-## Why
+- A speech-enabled editor **SHOULD** automatically detect `DICTATION.md` and use it as a post-processing step after STT.
+- Users should be able to choose the LLM model used for correction. `DICTATION.md` should be tuned for small/local models.
 
-STT is designed for general purpose language and commonly mistranscribes repo specifix keywords and acronyms. By proving an LLM powered mapping/correction, the transcribed prompts have much better success rate. It's all aboit making grep happy.
+## 🤔 Why
 
-## How
+Speech-to-text is designed for general-purpose language and commonly mistranscribes repo-specific keywords and acronyms. By providing an LLM-powered mapping and correction layer, transcribed prompts have a much better success rate. It's all about making your code — and your tools — actually understand what you said.
 
-You can reuse this dictation prompt generator agentic workflow in your repo.
+## 🚀 How
 
-- https://github.com/github/gh-aw/blob/main/.github/workflows/dictation-prompt.md
+You can reuse this dictation prompt generator agentic workflow in your own repo:
 
-## Examples
+- [dictation-prompt.md](https://github.com/github/gh-aw/blob/main/.github/workflows/dictation-prompt.md)
 
-- github/gh-aw https://github.com/github/gh-aw/blob/main/DICTATION.md
+## 🌍 Examples
+
+- [github/gh-aw — DICTATION.md](https://github.com/github/gh-aw/blob/main/DICTATION.md)
